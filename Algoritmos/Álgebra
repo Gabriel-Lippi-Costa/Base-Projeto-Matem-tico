@@ -1,0 +1,44 @@
+algoritmo "SistemasDeEquações1°Grau"
+var
+   A1, B1, C1, A2, B2, C2, X, Y, Multiplicador: Real
+
+inicio
+   Escreval("Resolvendo sistemas de equações lineares")
+   Escreval("Digite os coeficientes e o termo independente das equações.")
+
+
+   Escreva("Coeficiente de x na 1ª equação (A1): ")
+   Leia(A1)
+   Escreva("Coeficiente de y na 1ª equação (B1): ")
+   Leia(B1)
+   Escreva("Termo independente da 1ª equação (C1): ")
+   Leia(C1)
+
+
+   Escreva("Coeficiente de x na 2ª equação (A2): ")
+   Leia(A2)
+   Escreva("Coeficiente de y na 2ª equação (B2): ")
+   Leia(B2)
+   Escreva("Termo independente da 2ª equação (C2): ")
+   Leia(C2)
+
+
+   Multiplicador <- B2 / B1
+   A1 <- A1 * Multiplicador
+   B1 <- B1 * Multiplicador
+   C1 <- C1 * Multiplicador
+
+
+   A2 <- A2 - A1
+   B2 <- B2 - B1
+   C2 <- C2 - C1
+
+
+   X <- C2 / A2
+
+
+   Y <- (C1 - A1 * X) / B1
+
+
+   Escreval("Solução: S = {", X, ", ", Y, "}")
+fimalgoritmo
