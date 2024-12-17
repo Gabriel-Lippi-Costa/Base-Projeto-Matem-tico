@@ -1,0 +1,11 @@
+algoritmo "Porcentagem"
+var
+   Porcentagem, Valor, Resultado: Real
+inicio
+      Escreva("Digite o valor da sua porcentagem (NÃO DIGITE O SÍMBOLO):")
+      Leia(Porcentagem)
+      Escreva("Digite o valor que deseja calcular:")
+      Leia(Valor)
+      Resultado <- (Valor*Porcentagem)/100
+      Escreva("Essa conta chegou no resultado de ", Resultado)
+fimalgoritmo
