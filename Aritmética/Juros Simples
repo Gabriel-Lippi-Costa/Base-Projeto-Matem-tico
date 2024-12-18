@@ -1,0 +1,72 @@
+algoritmo "semnome"
+var
+   N: Inteiro
+   C, i, J, M, T: Real
+inicio
+   Escreval("Digite [1] caso queira descobrir o JUROS = J")
+   Escreval("Digite [2] caso queira descobrir o CAPITAL = C")
+   Escreval("Digite [3] caso queira descobrir a TAXA = i")
+   Escreval("Digite [4] caso queira descobrir o TEMPO = T")
+   Leia(N)
+   Escolha N
+   Caso 1
+      Escreval("OBS: NÃO SE ESQUEÇA DA CONVERSÃO DA TAXA E TEMPO.")
+      Escreva("Qual o capital?")
+      Leia(C)
+      Escreva("Qual a taxa?(NÃO DIGITE O SÍMBOLO DA PORCENTAGEM APENAS O VALOR)")
+      Leia(i)
+      Escreva("Qual o tempo?")
+      leia(T)
+      J <- (C*i*T)/100
+      Escreval("O seu juros foi de R$",J," reais.")
+      M <- C+J
+      Escreval("O montante foi de R$",M," reais.")
+
+   Caso 2
+      Escreval("OBS: NÃO SE ESQUEÇA DA CONVERSÃO DA TAXA E TEMPO.")
+      Escreva("Qual a taxa? (NÃO DIGITE O SÍMBOLO DA PORCENTAGEM APENAS O VALOR)")
+      Leia(i)
+      Escreva("Qual o tempo?")
+      Leia(T)
+      Escreva("Qual o juros?")
+      leia(J)
+      C <- (i*T)/100
+      C <- J/C
+      Escreval("O seu capital foi de R$",C," reais.")
+      M <- C + J
+      Escreval("O seu montante foi de R$",M," reais")
+      
+      
+      
+      
+   Caso 3
+      Escreval("OBS: NÃO SE ESQUEÇA DA CONVERSÃO DA TAXA E TEMPO.")
+      Escreva("Qual o juros?")
+      Leia(J)
+      Escreva("Qual o tempo?")
+      Leia(T)
+      Escreva("Qual o capital?")
+      Leia(C)
+      i <- C*T
+      i <- J/i
+      Escreval("Sua taxa ficou ",i,"% ao dia ou mês ou ano.")
+      M <- C + J
+      Escreval("O seu montante foi de R$",M," reais.")
+      
+      
+   Caso 4
+      Escreval("OBS: NÃO SE ESQUEÇA DA CONVERSÃO DA TAXA E TEMPO.")
+      Escreva("Qual o capital?")
+      Leia(C)
+      Escreva("Qual o juros?")
+      Leia(J)
+      Escreva("Qual a taxa? (NÃO DIGITE O SÍMBOLO DA PORCENTAGEM APENAS O VALOR)")
+      Leia(i)
+      T <- (C*i)/100
+      T <- J/T
+      Escreval("O tempo foi de ", T)
+      M <- C + J
+      Escreval("O montante foi de R$",M," reais.")
+
+   FimEscolha
+fimalgoritmo
