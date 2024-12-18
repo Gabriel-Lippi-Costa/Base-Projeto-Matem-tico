@@ -1,0 +1,69 @@
+algoritmo "ConversorDeUnidades"
+var
+   UnidadeOrigem, UnidadeDestino: Inteiro
+   Resultado, ValorConversao: Real
+inicio
+   Escreval("[1] KM => Quilômetro")
+   Escreval("[2] M => Metro")
+   Escreval("[3] CM => Centímetro")
+   Escreval("[4] MM => Milímetro")
+   Escreva("Digite o número da sua unidade de medida (1 a 4): ")
+   Leia(UnidadeOrigem)
+   Escreva("Digite o número da unidade de medida que deseja converter (1 a 4): ")
+   Leia(UnidadeDestino)
+   Escreva("Qual o valor da sua conversão? ")
+   Leia(ValorConversao)
+   Se (UnidadeOrigem=1) e (UnidadeDestino=2) entao
+      Resultado <- ValorConversao*1000
+      Escreva("A conversão foi para: ", Resultado, "m.")
+   FimSe
+    Se (UnidadeOrigem=1) e (UnidadeDestino=3) entao
+      Resultado <- ValorConversao*100000
+      Escreva("A conversão foi para: ", Resultado, "cm.")
+   FimSe
+    Se (UnidadeOrigem=1) e (UnidadeDestino=4) entao
+      Resultado <- ValorConversao*1000000
+      Escreva("A conversão foi para: ", Resultado, "mm.")
+   FimSe
+   Se (UnidadeOrigem=2) e (UnidadeDestino=1) entao
+      Resultado <- ValorConversao/1000
+      Escreva("A conversão foi para: ", Resultado, "km.")
+   FimSe
+   Se (UnidadeOrigem=2) e (UnidadeDestino=3) entao
+      Resultado <- ValorConversao*100
+      Escreva("A conversão foi para: ", Resultado, "cm.")
+   FimSe
+   Se (UnidadeOrigem=2) e (UnidadeDestino=4) entao
+      Resultado <- ValorConversao*1000
+      Escreva("A conversão foi para: ", Resultado, "mm.")
+   FimSe
+   Se (UnidadeOrigem=3) e (UnidadeDestino=1) entao
+      Resultado <- ValorConversao/100000
+      Escreva("A conversão foi para: ", Resultado, "km.")
+   FimSe
+   Se (UnidadeOrigem=3) e (UnidadeDestino=2) entao
+      Resultado <- ValorConversao/100
+      Escreva("A conversão foi para: ", Resultado, "m.")
+   FimSe
+   Se (UnidadeOrigem=3) e (UnidadeDestino=4) entao
+      Resultado <- ValorConversao*10
+      Escreva("A conversão foi para: ", Resultado, "mm.")
+   FimSe
+   Se (UnidadeOrigem=4) e (UnidadeDestino=1) entao
+      Resultado <- ValorConversao/1000000
+      Escreva("A conversão foi para: ", Resultado, "km.")
+   FimSe
+   Se (UnidadeOrigem=4) e (UnidadeDestino=2) entao
+      Resultado <- ValorConversao/1000
+      Escreva("A conversão foi para: ", Resultado, "m.")
+   FimSe
+   Se (UnidadeOrigem=4) e (UnidadeDestino=3) entao
+      Resultado <- ValorConversao/10
+      Escreva("A conversão foi para: ", Resultado, "cm.")
+   FimSe
+
+
+
+
+
+fimalgoritmo

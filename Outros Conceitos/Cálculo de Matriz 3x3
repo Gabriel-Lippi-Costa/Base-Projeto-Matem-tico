@@ -1,0 +1,74 @@
+algoritmo "CálculoDeMatriz"
+var
+   mat: vetor[1..3, 1..5] de inteiro
+   l,c: inteiro
+   Nome, ParteUm, ParteDois, ParteTres,ParteQuatro, ParteCinco, Resultado, ResultadoFinal, ParteSeis,DireitaPraEsquerda, EsquerdaPraDireita: Real
+inicio
+   Para l <- 1 ate 3 faca
+      Para c <- 1 ate 5 faca
+         Escreva("Digite um valor [", l, ",", c,"]: ")
+         Leia(mat[l,c])
+      FimPara
+   FimPara
+
+   Para l <- 1 ate 3 faca
+      Para c <- 1 ate 5 faca
+         Escreva(mat[l,c]:5)
+      FimPara
+      Escreval()
+   FimPara
+   Escreval("DA ESQUERDA PARA DIREITA O RESULTADO É POSITIVO.")
+   Escreval("DA DIREITA PARA ESUQERDA VOCÊ MULTIPLICA (-1).")
+   Escreval("VAMOS CALCULAR A MATRIZ:")
+   Escreval("========================")
+   Escreval()
+   Escreval("Vamos calcular a 1º parte da esquerda para direita.")
+   Escreval ( mat[1,1], mat[2,2], mat[3,3])
+   ParteUm <- mat[1,1]* mat[2,2]* mat[3,3]
+   Escreval("Esse é o resultado da 1° parte da esquerda para direita: ", ParteUm)
+   Escreval()
+   Escreval("Vamos calcular a 2º parte da esquerda para direita.")
+   Escreval ( mat[1,2], mat[2,3], mat[3,4])
+   ParteDois <- mat[1,2]* mat[2,3]* mat[3,4]
+   Escreval("Esse é o resultado da 1° parte da esquerda para direita: ", ParteDois)
+   Escreval()
+   Escreval("Vamos calcular a 1º parte da esquerda para direita.")
+   Escreval ( mat[1,3], mat[2,4], mat[3,5])
+   ParteTres <- mat[1,3]* mat[2,4]* mat[3,5]
+   Escreval("Esse é o resultado da 3° parte da esquerda para direita: ", ParteTres)
+   Escreval()
+   EsquerdaPraDireita <- ParteUm + ParteDois + ParteTres
+   Escreval("O resultado final da Esquerda para direita foi:", EsquerdaPraDireita)
+   Escreval()
+   Escreval("Vamos calcular a 1º parte da direita para esquerda.")
+   Escreval ( mat[1,5], mat[2,4], mat[3,3])
+   ParteQuatro <- (mat[1,5]* mat[2,4]* mat[3,3])*(-1)
+   Escreval("Esse é o resultado da 1° parte da direita para esquerda: ", ParteQuatro)
+   Escreval()
+   Escreval("Vamos calcular a 2º parte da direita para esquerda.")
+   Escreval ( mat[1,4], mat[2,3], mat[3,2])
+   ParteCinco <- (mat[1,4]* mat[2,3]* mat[3,2])*(-1)
+   Escreval("Esse é o resultado da 2° parte da direita para esquerda: ", ParteCinco)
+   Escreval()
+   Escreval("Vamos calcular a 3º parte da direita para esquerda.")
+   Escreval ( mat[1,3], mat[2,2], mat[3,1])
+   ParteSeis <- (mat[1,3]* mat[2,2]* mat[3,1])*(-1)
+   Escreval("Esse é o resultado da 1° parte da direita para esquerda: ", ParteSeis)
+   DireitaPraEsquerda <- -ParteQuatro  -ParteCinco -ParteSeis
+   Escreval()
+   Resultado <- EsquerdaPraDireita - DireitaPraEsquerda
+   Escreval()
+   ResultadoFinal <- Resultado*0.5
+   Escreval()
+   Escreval("============================")
+   escreval("RESULTADO DA MATRIZ É: ", ResultadoFinal )
+
+
+
+
+
+
+
+
+
+fimalgoritmo

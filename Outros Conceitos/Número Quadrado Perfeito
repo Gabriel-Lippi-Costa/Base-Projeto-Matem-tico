@@ -1,0 +1,12 @@
+algoritmo "semnome"
+var
+   Resultado, Valor: Real
+inicio
+      Escreva("Digite um número para eu descobrir se ele é um (NÚMERO QUADRADO PERFEITO).")
+      Leia(Valor)
+      Resultado <- RaizQ(Valor)
+      Escreval("Se o ", Valor, " tiver a resposta com vírgula então não é número perfeito.")
+      Escreva(Resultado)
+      
+
+fimalgoritmo

@@ -1,0 +1,51 @@
+algoritmo "semnome"
+var
+   Conversao: Inteiro
+   K,C,F, Temperatura: Real
+inicio
+   Escreval("[1] KELVIN => CELSIUS")
+   Escreval("[2] KELVIN => FAHRENHEIT")
+   Escreval("[3] CELSIUS => KELVIN")
+   Escreval("[4] CELSIUS => FAHRENHEIT")
+   Escreval("[5] FAHRENHEIT => CELSIUS")
+   Escreval("[6] FAHRENHEIT => KELVIN")
+   Escreva("Digite o número que deseja realizar a conversão:")
+   Leia(Conversao)
+   Se (Conversao=1) entao
+      Escreva("Qual a temperatura em Kelvin?")
+      Leia(K)
+      Temperatura <- K - 273
+      Escreva("O resultado da sua conversão deu ", Temperatura, "°C.")
+   FimSe
+   Se (Conversao=2) entao
+      Escreva("Qual a temperatura em Kelvin?")
+      Leia(K)
+      Temperatura <- (K-273)*1.8+32
+      Escreva("O resultado da sua conversão deu ", Temperatura, "°F.")
+   FimSe
+   Se (Conversao=3) entao
+      Escreva("Qual a temperatura em Celsius?")
+      Leia(C)
+      Temperatura <- C + 273
+      Escreva("O resultado da sua conversão deu ", Temperatura, "K.")
+   FimSe
+   Se (Conversao=4) entao
+      Escreva("Qual a temperatura em Celsius?")
+      Leia(C)
+      Temperatura <- C*1.8+32
+      Escreva("O resultado da sua conversão deu ", Temperatura, "°F.")
+   FimSe
+   Se (Conversao=5) entao
+      Escreva("Qual a temperatura em FAHRENHEIT?")
+      Leia(F)
+      Temperatura <- (F-32)/1.8
+      Escreva("O resultado da sua conversão deu ", Temperatura, "°C.")
+   FimSe
+    Se (Conversao=6) entao
+      Escreva("Qual a temperatura em FAHRENHEIT?")
+      Leia(F)
+      Temperatura <- (F-32)*(5/9)+273
+      Escreva("O resultado da sua conversão deu ", Temperatura, "K.")
+   FimSe
+
+fimalgoritmo

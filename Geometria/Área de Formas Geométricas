@@ -1,0 +1,67 @@
+algoritmo "CálculoDeÁreaDeFormasGeométricas"
+var
+   conta: Inteiro
+   CUm, Bmaior, Bmenor, L, area, Dmenor, Dmaior, Raio, B, h: Real
+
+inicio
+
+   Escreval("Selecione a forma geométrica para calcular a área do terreno:")
+   Escreval("[1] QUADRADO")
+   Escreval("[2] TRIÂNGULO")
+   Escreval("[3] RETÂNGULO")
+   Escreval("[4] TRAPÉZIO")
+   Escreval("[5] LOSANGO")
+   Escreval("[6] CÍRCULO")
+   Escreva("Digite o número correspondente à forma geométrica: ")
+   Leia(conta)
+
+   Escolha conta
+   Caso 1
+      Escreva("Qual é a medida do lado do quadrado? ")
+      Leia(L)
+      area <- L^2
+      Escreval("A área do seu terreno quadrangular é de ", area:5:2, " metros quadrados.")
+   Caso 2
+      Escreva("Qual a medida da base do triângulo? ")
+      Leia(B)
+      Escreva("Qual a medida da altura do triângulo? ")
+      Leia(h)
+      area <- (B * h) / 2
+      Escreval("A área do seu terreno triangular é de ", area:5:2, " metros quadrados.")
+   Caso 3
+      Escreva("Qual a medida da base do retângulo? ")
+      Leia(B)
+      Escreva("Qual a medida da altura do retângulo? ")
+      Leia(h)
+      area <- B * h
+      Escreval("A área do seu terreno retangular é de ", area:5:2, " metros quadrados.")
+   Caso 4
+      Escreval("Vamos calcular a área do trapézio por etapas.")
+      Escreva("Qual a medida da maior base? ")
+      Leia(Bmaior)
+      Escreva("Qual a medida da menor base? ")
+      Leia(Bmenor)
+      Escreva("Qual a medida da altura? ")
+      Leia(h)
+      CUm <- (Bmaior + Bmenor) * h
+      Escreval("Resultado intermediário (base maior + base menor) * altura: ", CUm:5:2)
+      area <- CUm / 2
+      Escreval("A área do seu terreno trapezoidal é de ", area:5:2, " metros quadrados.")
+   Caso 5
+      Escreva("Qual a medida da diagonal maior do losango? ")
+      Leia(Dmaior)
+      Escreva("Qual a medida da diagonal menor do losango? ")
+      Leia(Dmenor)
+      area <- (Dmaior * Dmenor) / 2
+      Escreval("A área do seu terreno losangular é de ", area:5:2, " metros quadrados.")
+   Caso 6
+      Escreva("Qual a medida do raio do círculo? ")
+      Leia(Raio)
+      area <- Pi * Raio^2
+      Escreval("A área do seu terreno circular é de ", area:5:2, " metros quadrados.")
+   Caso Contrario
+      Escreval("Opção inválida! Por favor, selecione um número entre 1 e 6.")
+   FimEscolha
+
+   Escreval("Cálculo concluído. Obrigado por usar o programa!")
+fimalgoritmo

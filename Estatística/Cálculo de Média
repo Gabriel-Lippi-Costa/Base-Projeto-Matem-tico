@@ -1,0 +1,41 @@
+algoritmo "CálculoMédiaModaMediana"
+var
+   Resposta: Caractere
+   Quantidade, C, i, j, MaiorFrequencia, Frequencia, Moda: Inteiro
+   V, Resultado, Soma: Real
+   Numeros: vetor[1..100] de inteiro
+inicio
+   C <- 1
+   Escreva("Você deseja calcular Média, Moda ou Mediana? ")
+   Leia(Resposta)
+   Se (Resposta="Média") entao
+      Escreva("Você deseja calcular a Média de quantos números?")
+      Leia(Quantidade)
+      Para C <- C ate Quantidade faca
+         Escreva("Digite o seu valor:")
+         Leia(V)
+         C <- C+1
+         Soma <- Soma + V
+      FimPara
+      Resultado <- Soma/Quantidade
+      Escreva("O Resultado dessa média foi de: ", Resultado)
+   senao
+   
+   
+      //CALCULAR MODA E MEDIANA
+      Se (Resposta="Moda") entao
+
+            FimSe
+         FimPara
+
+         Escreval("A moda dos números é: ", Moda)
+
+
+
+
+
+
+   FimSe
+
+
+fimalgoritmo

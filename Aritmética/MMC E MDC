@@ -1,0 +1,150 @@
+algoritmo "MMCeMDC"
+var
+   Quantidade,Divisor, Valor, ValorUm, ValorDois, ValorTres, ValorQuatro, Maior, Menor, Aux, ParteCima, ParteBaixo:Inteiro
+   Operacao: Caractere
+   Resultado, Um, Dois, Tres: Real
+
+inicio
+   Escreva("Você deseja calcular quantos números?")
+   Leia(Quantidade)
+   Escolha Quantidade
+
+
+   Caso 1
+      Escreva("Você deseja calcular MDC ou MMC?")
+      Leia(Operacao)
+      Escreva("Qual é o número que você deseja calcular?")
+      Leia(Valor)
+      Se (Operacao = "MDC") entao
+         Escreva("O resultado do ", Operacao, " foi de ", Valor)
+      FimSe
+      Se (operacao = "MMC") entao
+         Escreva("O resultado do ", Operacao, " foi de" , Valor)
+      FimSe
+
+   Caso 2
+      Escreva("Você deseja calcular MDC ou MMC?")
+      leia(Operacao)
+      Se (Operacao = "MDC") entao
+         Escreva("Digite o 1° número:")
+         Leia(ValorUm)
+         Escreva("Digite o 2° número:")
+         Leia(ValorDois)
+         Se (ValorUm > ValorDois) entao
+            Maior <- ValorUm
+            Menor <- ValorDois
+         senao
+            Maior <- ValorDois
+            Menor <- ValorUM
+         FimSe
+         Enquanto (Maior mod Menor > 0) faca
+            Aux <- Menor
+            menor<- Maior mod Menor
+            maior <- Aux
+         FimEnquanto
+
+         Escreva("O resultado do ", Operacao, " foi de" , Menor)
+      senao
+         Escreva("Digite o 1° número:")
+         Leia(ValorUm)
+         Escreva("Digite o 2° número:")
+         Leia(ValorDois)
+         Se (ValorUm > ValorDois) entao
+            Maior <- ValorUm
+            Menor <- ValorDois
+         senao
+            Maior <- ValorDois
+            Menor <- ValorUM
+         FimSe
+         Enquanto (Maior mod Menor > 0) faca
+            Aux <- Menor
+            menor<- Maior mod Menor
+            maior <- Aux
+         FimEnquanto
+         ParteCima <- ValorUm*ValorDois
+         ParteBaixo <- Menor
+         Resultado <- ParteCima/ParteBaixo
+         Escreva("O resultado do ", Operacao, " foi de ", Resultado)
+      FimSe
+
+
+   Caso 3
+      Escreva("Você deseja calcular MDC ou MMC?")
+      leia(Operacao)
+      Se (Operacao = "MDC") entao
+         Escreva("Digite o 1° número:")
+         Leia(ValorUm)
+         Escreva("Digite o 2° número:")
+         Leia(ValorDois)
+         Escreva("Digite o 3° número:")
+         Leia(ValorTres)
+         Se (ValorUm > ValorDois) entao
+            Maior <- ValorUm
+            Menor <- ValorDois
+         senao
+            Maior <- ValorDois
+            Menor <- ValorUM
+         FimSe
+         Enquanto (Maior mod Menor > 0) faca
+            Aux <- Menor
+            menor<- Maior mod Menor
+            maior <- Aux
+         FimEnquanto
+         ValorQuatro <- Menor
+         Se (ValorTres > ValorQuatro) entao
+            Maior <- ValorTres
+            Menor <- ValorQuatro
+         senao
+            Maior <- ValorQuatro
+            Menor <- ValorTres
+         FimSe
+         Enquanto (Maior mod Menor > 0) faca
+            Aux <- Menor
+            menor<- Maior mod Menor
+            maior <- Aux
+         FimEnquanto
+         Escreva("O resultado do ", Operacao, " foi de ", menor)
+      senao
+         Escreva("Digite o 1º valor:")
+         Leia(Um)
+         Escreva("Digite o 2º valor:")
+         Leia(Dois)
+         Escreva("Digite o 3º valor:")
+         Leia(Tres)
+         Escreva(Um, ",", Dois, ",", Tres)
+         Escreval()
+         Repita
+            Escreva("Você quer dividir o 1° valor por quanto(se não quiser dividr então apenas digite [1]) ou se deseja encerrar o cálculo digite [0].")
+            Leia(Divisor)
+            Um <- Um / Divisor
+            Escreva("Você quer dividir o 2° valor por quanto(se não quiser dividr então apenas digite [1]) ou se deseja encerrar o cálculo digite [0].")
+            Leia(Divisor)
+            Dois <- Dois / Divisor
+            Escreva("Você quer dividir o 3° valor por quanto(se não quiser dividr então apenas digite [1]) ou se deseja encerrar o cálculo digite [0].")
+            Leia(Divisor)
+            Tres <- Tres / Divisor
+            Escreval(Um, ",", Dois, ",", Tres, "|", Divisor)
+         Ate (Divisor = 0)
+         Escreva("Agora é só calcular os divisores para descobrir o MMC.")
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         FimSe
+      FimEscolha
+fimalgoritmo

@@ -1,0 +1,52 @@
+algoritmo "CálculoDeDiagonaisDePolígonosConvexos"
+var
+   n, PassoUm, PassoDois,R, d, c,Resultado, NumeroUm, NumeroDois: Inteiro
+   PassoTres: Real
+
+inicio
+      Escreval("FÓRMULA PARA CALCULAR AS DIAGONAIS DE UM POLÍGONO:")
+      Escreval("    d = ((n-3).n)/2                                             ")
+      Escreval()
+      Escreval("OBS: d = diagonais, n = quantidade de lados               ")
+      Escreval()
+      Escreval()
+      Escreval("====================================================")
+      Escreval("Digite [1] caso você sabe o número de lados.")
+      Escreval("Digite [2] caso você não sabe o número de lados.")
+      Leia(R)
+      Escolha R
+      Caso 1
+      Escreval("Agora iremos partir para o cálculo, qual a quantidade de lados?")
+      Leia(n)
+      Escreval("d = ((n-3).n)/2")
+      PassoUm <- n-3
+      Escreval("d = (", PassoUm, ".", n, ")/2")
+      PassoDois <- PassoUm*n
+      Escreval("d = ", PassoDois, "/2")
+      PassoTres <- PassoDois/2
+      Escreval("O número de diagonais foi de d = ", PassoTres)
+
+
+      Caso 2
+      c <- 1
+      Escreva("Qual a quantidade de diagonais?")
+      Leia(d)
+      Escreval("n.(n-3)/2 = ", d)
+      PassoUm <- d*2
+      EscrevaL("n.(n-3) = ", PassoUm)
+      Escreval("Você precisa calcular por meio da multiplicação, até que chegue no resultado das diagonais ", PassoUm)
+      Repita
+         Escreval("Escreva o 1° digito:")
+         Leia(NumeroUm)
+         Escreval("Escreva o 2° digito:")
+         Leia(NumeroDois)
+         Resultado <- NumeroUm*NumeroDois
+         Escreval(NumeroUm, " x ", NumeroDois, " = ", Resultado)
+         Resultado <- NumeroUm*NumeroDois
+         C <- C +1
+         Ate (Resultado = PassoUm)
+      Escreva("Então o número de lados do seu polígono é de ", NumeroUm)
+
+
+     FimEscolha
+fimalgoritmo

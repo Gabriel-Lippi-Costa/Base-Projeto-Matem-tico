@@ -1,0 +1,72 @@
+algoritmo "semnome"
+var
+   Solido: Inteiro
+   Volume, L, BaseUm, BaseDois, Altura, Raio, AreaBase, RaioEsfera, RaioCone: Real
+   Unidade: Caractere
+inicio
+   Pi <- 3.14
+   Escreval("[1] CUBO")
+   Escreval("[2] PARALELEPÍPEDO ")
+   Escreval("[3] CILINDRO")
+   Escreval("[4] PRISMA")
+   Escreval("[5] ESFERA")
+   Escreval("[6] CONE")
+   Escreval("[7] PIRÂMIDE BASE QUADRANGULAR")
+   Escreva("Qual sólido geométrico você gostaria de calcular o volume?")
+   Leia(Solido)
+   Escreva("Qual a unidade de medida da sua forma geométrica?")
+   Leia(Unidade)
+   Escolha Solido
+   Caso 1
+      Escreva("Qual a medida do lado?")
+      Leia(L)
+      Volume <- L^3
+      Escreva("O volume do cubo é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 2
+      Escreva("Qual a medida da 1° base?")
+      Leia(BaseUm)
+      Escreva("Qual a medida da 2° base?")
+      Leia(BaseDois)
+      Escreva("Qual a medida da altura?")
+      Leia(Altura)
+      Volume <- BaseUm*BaseDois*Altura
+      Escreva("O volume do paralelepípedo é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 3
+      Escreva("Qual a medida do raio?")
+      Leia(Raio)
+      escreva("Qual a medida da altura?")
+      Leia(Altura)
+      Volume <- Pi*(Raio^2)*Altura
+      Escreva("O volume do cilindro é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 4
+      Escreva("Qual a medida da área(BASE)?")
+      Leia(AreaBase)
+      escreva("Qual a medida da altura?")
+      Leia(Altura)
+      Volume <- AreaBase*Altura
+      Escreva("O volume do prisma é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 5
+      Escreva("Qual a medida do raio?")
+      Leia(RaioEsfera)
+      Raio <- RaioEsfera^3
+      Escreval("A medida do seu raio foi de ", Raio, " agora irei calcular o volume.")
+      Volume <- (4*Pi*Raio)/3
+      Escreva("O volume da esfera é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 6
+      Escreva("Qual a medida do raio?")
+      Leia(RaioCone)
+      Raio <- RaioCone^2
+      Escreval("A medida do raio foi de ", Raio)
+      Escreva("Qual a medida da altura?")
+      Leia(Altura)
+      Volume <- (Pi*Raio*Altura)/3
+      Escreva("O volume do cone é de ", Volume:5:2, Unidade, " cubicos.")
+   Caso 7
+      Escreva("Qual a medida da área da base?")
+      Leia(AreaBase)
+      Escreva("Qual a medida da altura?")
+      leia(Altura)
+      Volume <- (Areabase*Altura)/3
+      Escreva("O volume da pirâmide de base triangular é de ", Volume:5:2, Unidade, " cubicos.")
+   FimEscolha
+fimalgoritmo

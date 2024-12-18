@@ -1,0 +1,50 @@
+algoritmo "LeiDosCossenos"
+var
+   W: Inteiro
+   b, c, Theta, PassoUm, PassoDois, PassoTres, PassoQuatro, PassoCinco: Real
+inicio
+      EscrevaL("Fórmula: a^2 = b^2+c^2-2*b*c*cos(Theta)")
+      Escreva("Qual o valor de b?")
+      Leia(b)
+      Escreva("Qual o valor de c?")
+      Leia(c)
+      Escreval("Digite a palavra entre as chaves que corresponde ao seu cos (Theta). ")
+      Escreval("[1] Cos 30º = RaizDe3/2")
+      Escreval("[2] Cos 45º = RaizDe2/2")
+      Escreval("[3] Cos 60º = 1/2")
+      Leia(W)
+
+      Escolha W
+      Caso 1
+         Theta <- (RaizQ(3))/2
+
+
+      Caso 2
+
+         Theta <- (RaizQ(2))/2
+
+      Caso 3
+
+         Theta <- 1/2
+      FimEscolha
+
+      Escreval("a^2 = b^2+c^2-2*b*c*cos(Theta)")
+      Escreval("x^2 = ",b,"^2*",c,"^2 - 2*",b,"*",c,"*", Theta)
+      PassoUm <- b^2
+      PassoDois <- c^2
+      Escreval("x^2 = ",PassoUm,"+",PassoDois," - 2*",b,"*",c,"*", Theta)
+      PassoTres <- PassoUm+PassoDois
+      PassoQuatro <- 2*b*c*Theta
+      EscrevaL("x^2 = ",PassoTres, " -", PassoQuatro)
+      PassoCinco <- PassoTres - PassoQuatro
+      PassoCinco <- RaizQ(PassoCinco)
+      Escreval("x = ",PassoCinco)
+      
+
+
+
+
+
+
+   FimEscolha
+fimalgoritmo

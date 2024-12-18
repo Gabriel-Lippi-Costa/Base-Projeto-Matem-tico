@@ -1,0 +1,51 @@
+algoritmo "JurosCompostos"
+var
+   N: Inteiro
+   C, M, T, i, Resultado, Taxa, PassoUm, PassoDois, PassoTres: Real
+inicio
+   Escreval("Digite [1] caso queira descobrir o MONTANTE.")
+   Escreval("Digite [2] caso queira descobrir TAXA.")
+   Escreval("Digite [3] caso queira descobrir o CAPITAL.")
+   Leia(N)
+   Escolha N
+   Caso 1
+      EscrevaL("NÃO SE ESQUEÇA DA CONVERSÃO DO TEMPO E TAXA!!")
+      Escreva("Qual o valor do Capital?")
+      Leia(C)
+      Escreva("Qual o valor da Taxa?")
+      Leia(i)
+      Escreva("Qual o valor do Tempo?")
+      Leia(T)
+      PassoUm <- (1+i)^T
+      Resultado <- C * PassoUm
+      Escreva("O seu Montante foi de R$",Resultado, " reais.")
+
+
+   Caso 2
+      Escreva("Qual o valor do Montante? ")
+      Leia(M)
+      Escreva("Qual o valor do Capital?")
+      Leia(C)
+      Escreva("Qual o valor do Tempo?")
+      Leia(T)
+      PassoUm <- (M/C)
+      PassoDois <- 1/T
+      PassoTres <- PassoUm^PassoDois
+      Resultado <- PassoTres - 1
+      Taxa <- Resultado * 100
+      Escreva("A sua taxa foi de ", Taxa, "%.")
+
+
+   Caso 3
+      Escreva("Qual o valor do Montante?")
+      Leia(M)
+      Escreva("Qual o valor da Taxa?")
+      Leia(i)
+      Escreva("Qual o valor do Tempo?")
+      Leia(T)
+      PassoUm <- (1 + i)^T
+      Resultado <- M/PassoUm
+      Escreva("O seu Capital foi de R$", Resultado, " reais.")
+      
+   FimEscolha
+fimalgoritmo

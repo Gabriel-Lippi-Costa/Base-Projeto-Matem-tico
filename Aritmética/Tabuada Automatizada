@@ -1,0 +1,19 @@
+algoritmo "TabuadaAutomatizada"
+var
+   Tabuada, Resultado: Real
+   C, Salto, Numero: Inteiro
+inicio
+   Escreva("Eu posso calcular a tabuada de qualquer número para você, qual você deseja?")
+   Leia(Tabuada)
+   Escreva("Até que número você quer que eu calcule?")
+   Leia(Numero)
+   Escreva("Você quer saltar de quanto em quanto?")
+   Leia(Salto)
+   Para C de 1 ate Numero passo Salto faca
+   Resultado <- Tabuada* C
+   Escreval(Tabuada, " x", C, " = ", Resultado)
+   FimPara
+
+   
+
+fimalgoritmo

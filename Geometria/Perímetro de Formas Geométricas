@@ -1,0 +1,64 @@
+algoritmo "CálculoDePerímetroDeFormasGeométricas"
+var
+   conta: Inteiro
+   perimetro, D, L, LadoUm, LadoDois, LadoTres, Lmenor, Lmaior, LUm, LDois, LTres, LQuatro: Real
+inicio
+   Escreval("Selecione a forma geométrica para calcular o perímetro:")
+   Escreval("[1] QUADRADO")
+   Escreval("[2] TRIÂNGULO")
+   Escreval("[3] RETÂNGULO")
+   Escreval("[4] TRAPÉZIO")
+   Escreval("[5] LOSANGO")
+   Escreval("[6] CÍRCULO")
+   Escreva("Digite o número correspondente à forma geométrica: ")
+   Leia(conta)
+
+   Escolha conta
+   Caso 1
+      Escreva("Qual é a medida do lado do quadrado? ")
+      Leia(L)
+      perimetro <- 4 * L
+      Escreval("O perímetro do terreno quadrangular é de ", perimetro:5:2, " metros.")
+   Caso 2
+      Escreva("Qual a medida do 1º lado? ")
+      Leia(LadoUm)
+      Escreva("Qual a medida do 2º lado? ")
+      Leia(LadoDois)
+      Escreva("Qual a medida do 3º lado? ")
+      Leia(LadoTres)
+      perimetro <- LadoUm + LadoDois + LadoTres
+      Escreval("O perímetro do terreno triangular é de ", perimetro:5:2, " metros.")
+   Caso 3
+      Escreva("Qual a medida do lado menor? ")
+      Leia(Lmenor)
+      Escreva("Qual a medida do lado maior? ")
+      Leia(Lmaior)
+      perimetro <- 2 * (Lmaior + Lmenor)
+      Escreval("O perímetro do terreno retangular é de ", perimetro:5:2, " metros.")
+   Caso 4
+      Escreva("Qual a medida do 1º lado? ")
+      Leia(LUm)
+      Escreva("Qual a medida do 2º lado? ")
+      Leia(LDois)
+      Escreva("Qual a medida do 3º lado? ")
+      Leia(LTres)
+      Escreva("Qual a medida do 4º lado? ")
+      Leia(LQuatro)
+      perimetro <- LUm + LDois + LTres + LQuatro
+      Escreval("O perímetro do terreno trapezoidal é de ", perimetro:5:2, " metros.")
+   Caso 5
+      Escreva("Qual a medida do lado do losango? ")
+      Leia(L)
+      perimetro <- 4 * L
+      Escreval("O perímetro do terreno losangular é de ", perimetro:5:2, " metros.")
+   Caso 6
+      Escreva("Qual a medida do diâmetro do círculo? ")
+      Leia(D)
+      perimetro <- Pi * D
+      Escreval("O perímetro do terreno circular é de ", perimetro:5:2, " metros.")
+   Caso Contrario
+      Escreval("Opção inválida. Por favor, selecione um número entre 1 e 6.")
+   FimEscolha
+
+   Escreval("Obrigado por usar o cálculo de perímetros!")
+fimalgoritmo

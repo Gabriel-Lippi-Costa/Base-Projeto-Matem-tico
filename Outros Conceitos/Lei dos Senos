@@ -1,0 +1,20 @@
+algoritmo "semnome"
+var
+   W, Z: Inteiro
+   LadoConhecido, AnguloDesconhecido, AnguloOposto, AnguloDescobrir, PassoUm, PassoDois: Real
+inicio
+
+   Escreval("Fórmula: a/sen Â = b/senB = c/senC")
+   Escreva("Qual o valor do lado conhecido?")
+   Leia(LadoConhecido)
+   Escreva("Calcule e escreva o valor do seu ângulo:")
+   Leia(AnguloDesconhecido)
+   Escreva("Calcule e escreva o valor do ângulo oposto do lado que queremos descobrir:")
+   Leia(AnguloOposto)
+   PassoUm <- LadoConhecido * AnguloOposto
+   Escreval("x * ",AnguloDesconhecido, " = ",PassoUm)
+   PassoDois <- PassoUm/AnguloDesconhecido
+   Escreva("x = ", PassoDois)
+   
+
+fimalgoritmo

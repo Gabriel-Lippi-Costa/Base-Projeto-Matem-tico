@@ -1,0 +1,130 @@
+algoritmo "semnome"
+var
+   Rum: Caractere
+   Hipo, CatUm, CatDois, PassoUm, PassoDois, PassoTres,PassoQuatro, SomaCat, Dividir, Raiz: Real
+
+
+inicio
+   EscrevaL("FÓRMULA => TEOREMA DE PITÁGORAS: ")
+   Escreval("(Hipotenusa)^2 = (Cateto1)^2 + (Cateto2)^2")
+   Escreval("============================================")
+   Escreval()
+   Escreval("Digite [1] caso se eu tenho X no Cateto1 e Cateto2")
+   Escreval("Digite [2] caso se eu tenho X na Hipotenusa")
+   Escreval("Digite [3] caso se eu tenho x apenas no Cateto1")
+   Escreval("Digite [4] caso se eu tenho x apenas no Cateto2")
+   Leia(Rum)
+   Se (Rum = "1") entao
+      Escreva("Qual o valor do Cateto1?")
+      Leia(CatUm)
+      Escreva("Qual o valor do Cateto2?")
+      Leia(CatDois)
+      Escreva("Qual o valor da Hipotenusa?")
+      Leia(Hipo)
+      Escreva(Hipo, "^2 = ", CatUm, "x^2", " +", CatDois, "x^2")
+      PassoUm <- Hipo^2
+      PassoDois <- CatUm^2
+      PassoTres <- CatDois^2
+      Escreval()
+      Escreval(PassoUm, " = ", PassoDois, "x + ", PassoTres, "x")
+      SomaCat <- PassoDois + PassoTres
+      Escreval(SomaCat, "x = ", PassoUm)
+      Dividir <- PassoUm/SomaCat
+      Escreval(" x = ", Dividir)
+   senao
+      Se (Rum="2") entao
+         Escreva("Qual o valor da Hipotenusa? (Se no X não tem número então apenas de um espaço)")
+         Leia(Hipo)
+         Enquanto (Hipo>0) faca
+            Escreva("Qual o valor do Cateto1?")
+            Leia(CatUm)
+            Escreva("Qual o valor do CAteto2?")
+            Leia(CatDois)
+            Escreval(Hipo, "x^2 = ", CatUm, "^2", " +", CatDois, "^2")
+            PassoDois <- CatUm^2
+            PassoTres <- CatDois^2
+            Escreval(Hipo, "x^2 = ", PassoDois, " + ", PassoTres)
+            SomaCat <- PassoDois + PassoTres
+            Escreval(Hipo, "x^2 = ", SomaCat)
+            PassoQuatro <- SomaCat/Hipo
+            Escreval(" x^2 = ", PassoQuatro)
+            Raiz <- RaizQ(PassoQuatro)
+            Escreval(" x = ", Raiz)
+         FimEnquanto
+         Escreva("Qual o valor do Cateto1?")
+         Leia(CatUm)
+         Escreva("Qual o valor do CAteto2?")
+         Leia(CatDois)
+         Escreval("x^2 = ", CatUm, "^2", " +", CatDois, "^2")
+         PassoDois <- CatUm^2
+         PassoTres <- CatDois^2
+         Escreval("x^2 = ", PassoDois, " + ", PassoTres)
+         SomaCat <- PassoDois + PassoTres
+         Escreval("x^2 = ", SomaCat)
+         Raiz <- RaizQ(SomaCat)
+         Escreval("x = ", Raiz)
+      senao
+         Se (Rum="3") entao
+            Escreva("Qual o valor do Cateto1? (Se no X não tem número então apenas de um espaço)")
+            Leia(CatUm)
+            Escreva("Qual o valor do Cateto2? ")
+            Leia(CatDois)
+            Escreva("Qual o valor da Hipotenusa?")
+            Leia(Hipo)
+            Escreva(Hipo, "^2 = ", CatUm, "x^2", " +", CatDois, "^2")
+            PassoUm <- Hipo^2
+            PassoTres <- CatDois^2
+            Escreval()
+            Escreval(PassoUm, " = ", "x^2 + ", PassoTres)
+            PassoQuatro <- PassoUm - PassoTres
+            Escreval(PassoQuatro, " = x^2")
+            Raiz <- RaizQ(PassoQuatro)
+            Escreval(" x = ", Raiz)
+         senao
+            Se (Rum="4") entao
+               Escreva("Qual o valor do Cateto1?")
+               leia(CatUm)
+               Escreva("Qual o valor do Cateto2? (Se no X não tem número então apenas de um espaço)")
+               Leia(CatDois)
+               Escreva("Qual o valor da Hipotenusa?")
+               Leia(Hipo)
+               Escreval(Hipo, "^2 = ", CatUm, "^2", " +", CatDois, "x^2")
+               PassoUm <- Hipo^2
+               PassoDois <- CatUm^2
+               Escreval(PassoUm, " = ", PassoDois, " +", CatDois, "x^2")
+               PassoTres<- PassoUm - PassoDois
+               Escreval(PassoTres,  " = x^2")
+               Se(CatDois=0) entao
+                  Escreval(" x^2 = ", PassoTres)
+                  Raiz <- RaizQ(PassoTres)
+                  Escreva(" x = ", Raiz)
+               senao
+                  PassoQuatro <- PassoTres/CatDois
+                  Escreval(" x^2 = ", PassoQuatro)
+                  Raiz <- RaizQ(PassoQuatro)
+                  Escreva(" x = ", Raiz)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+               FimSe
+            FimSe
+         FimSe
+      FimSe
+   FimSe
+
+fimalgoritmo
