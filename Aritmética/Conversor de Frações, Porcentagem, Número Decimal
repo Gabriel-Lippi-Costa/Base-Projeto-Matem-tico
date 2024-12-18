@@ -1,0 +1,138 @@
+algoritmo "ConvertorEntreFrações,NúmerosDecimaisEPorcentagem"
+var
+   Opcao,Valor,ValorDois, Resposta, Numero,Casas: Inteiro
+   Resultado, Numerador, Denominador, Decimal,CasasDecimais: Real
+   Sair, R: Caractere
+inicio
+   Escreval("Digite [1] caso queira transformar PORCENTAGEM para NÚMERO DECIMAL.")
+   Escreval("Digite [2] caso queira transformar PORCENTAGEM para FRAÇÃO.")
+   Escreval("Digite [3] caso queira transformar NÚMERO DECIMAL para PORCENTAGEM.")
+   Escreval("Digite [4] caso queira transformar NÚMERO DECIMAL para FRAÇÃO.")
+   Escreval("Digite [5] caso queira transformar FRAÇÃO para PORCENTAGEM.")
+   Escreval("Digite [6] caso queira transformar FRAÇÃO para NÚMERO DECIMAL.")
+   Leia(Opcao)
+   Escreva()
+   Escreva()
+   Escolha Opcao
+   Caso 1
+      Escreva("Digite apenas o valor que deseja transformar: (NÃO PRECISA DIGITAR O %)")
+      Leia(Valor)
+      Resultado <- Valor/100
+      Escreva("O resultado da sua transformação foi de ", Resultado)
+
+
+
+   Caso 2
+      Escreva("Digite apenas o valor que deseja transformar: (NÃO PRECISA DIGITAR O %)")
+      Leia(Valor)
+      Numerador <- Valor
+      Denominador <- 100
+      Escreval("A resposta da transformação é quando você não consegue simplifica os dois números ao mesmo tempo, pelo mesmo número.")
+      Escreval()
+      Escreval()
+      Repita
+         Escreval("==========================")
+         Escreval(Numerador, "/", Denominador)
+         Escreval("===========================")
+         Escreval()
+         Escreval("Escolha um número para simplificar:")
+         Leia(Resposta)
+         Numerador <- Numerador / Resposta
+         Denominador <- Denominador / Resposta
+         Escreval()
+         Escreval("Se quiser sair digite [S] se não quiser apenas de um ENTER no teclado.")
+         Leia(Sair)
+         Escreval()
+      Ate (Sair="S")
+
+   Caso 3
+      Escreva("Digite apenas o valor que deseja transformar:")
+      Leia(Decimal)
+      Resultado <- Decimal * 100
+      Escreva("O resultado da sua transformação foi de ", Resultado, "%")
+
+
+   Caso 4
+      Escreva("O seu número ele tem quantas casas decimais depois da vírgula?")
+      Leia(Casas)
+      Escreva("Quais números ou qual número ele representa sem a vírgula?")
+      Leia(Numero)
+      CasasDecimais <- 10^Casas
+      Escreval("O resultado da sua transformação foi de ", Numero, "/", CasasDecimais)
+      Escreval("Mas se o seu número precisa simplificar ou você queira então digite [Simplificar], caso contrário [Encerrar]")
+      Leia(R)
+      Se (R = "Simplificar") então
+         Escreva("Digite o numerador da sua fração:")
+         Leia(Valor)
+         Escreva("Digite o denominador da sua fração:")
+         Leia(ValorDois)
+         Numerador <- Valor
+         Denominador <- ValorDois
+         Escreval("A resposta da transformação é quando você não consegue simplifica os dois números ao mesmo tempo, pelo mesmo número.")
+         Escreval()
+         Escreval()
+         Repita
+            Escreval("==========================")
+            Escreval(Numerador, "/", Denominador)
+            Escreval("===========================")
+            Escreval()
+            Escreval("Escolha um número para dividr o NUMERADOR.")
+            Leia(Resposta)
+            Numerador <- Numerador / Resposta
+            Escreval("Escolha um número para dividr o DENOMINADOR.")
+            Leia(Resposta)
+            Denominador <- Denominador / Resposta
+            Escreval()
+            Escreval("Se quiser sair digite [S] se não quiser apenas de um ENTER no teclado.")
+            Leia(Sair)
+            Escreval()
+         Ate (Sair="S")
+      senao
+         Se (R = "Encerrar") entao
+            Escreva("Cálculo encerrado.")
+         FimSe
+      FimSe
+
+
+   Caso 5
+      Escreva("Digite o numerador da sua fração:")
+      Leia(Numerador)
+      Escreva("Digite o denominador da sua fração:")
+      Leia(Denominador)
+      Escreval(Numerador,"/",Denominador)
+      Escreva ("Qual número multiplicado pelo seu denomiandor daria 100?")
+      Leia(Numero)
+      Numerador <- Numerador*Numero
+      Denominador <- Denominador*Numero
+      Escreval(Numerador,"/",Denominador)
+      Escreva("O resultado da sua transformação foi de ", Numerador,"%.")
+
+
+   Caso 6
+      Escreva("Digite o numerador da sua fração:")
+      Leia(Numerador)
+      Escreva("Digite o denominador da sua fração:")
+      Leia(Denominador)
+      Resultado <- Numerador/Denominador
+      Escreva("O resultado da sua transformação foi de ", Resultado)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   FimEscolha
+fimalgoritmo
